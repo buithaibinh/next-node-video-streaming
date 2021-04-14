@@ -1,4 +1,7 @@
-const fs = require('fs')
+import fs from 'fs';
+import path from 'path'
+import getConfig from 'next/config'
+const { serverRuntimeConfig } = getConfig()
 
 //streaming route
 /**
@@ -6,7 +9,8 @@ const fs = require('fs')
  */
 export default (req, res) => {
 
-  const videoPath = `./assets/${req.query.id}.mp4`;
+  const videoPath = path.join(serverRuntimeConfig.PROJECT_ROOT, `./assets/${req.query.id}.mp4`)
+
   const videoStat = fs.statSync(videoPath);
   const fileSize = videoStat.size;
   const videoRange = req.headers.range;
