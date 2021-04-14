@@ -1,0 +1,20 @@
+{
+  "name": "next-node-video-streaming",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "antd": "^4.15.1",
+    "lru-cache": "^6.0.0",
+    "next": "latest",
+    "null-loader": "3.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.8",
+    "swr": "^0.5.5"
+  }
+}
