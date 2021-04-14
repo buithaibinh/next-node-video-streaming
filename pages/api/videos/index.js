@@ -1,4 +1,4 @@
-import videos from '@/assets/mock';
+import videos from 'public/assets/mock';
 import rateLimit from '@/utils/rate-limit';
 
 const limiter = rateLimit({

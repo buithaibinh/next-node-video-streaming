@@ -9,7 +9,7 @@ const { serverRuntimeConfig } = getConfig()
  */
 export default (req, res) => {
 
-  const videoPath = path.join(serverRuntimeConfig.PROJECT_ROOT, `./assets/${req.query.id}.mp4`)
+  const videoPath = path.join(serverRuntimeConfig.PROJECT_ROOT, `./public/assets/${req.query.id}.mp4`)
 
   const videoStat = fs.statSync(videoPath);
   const fileSize = videoStat.size;

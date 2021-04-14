@@ -1,4 +1,4 @@
-import videos from '@/assets/mock';
+import videos from 'public/assets/mock';
 
 // make request for a particular video
 /**

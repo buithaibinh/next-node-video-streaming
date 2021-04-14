@@ -1,4 +1,4 @@
-import videos from '@/assets/mock';
+import videos from 'public/assets/mock';
 import fs from 'fs';
 import path from 'path'
 import getConfig from 'next/config'
@@ -13,7 +13,7 @@ export default (req, res) => {
   const video = videos.find((video) => video.id === id);
   if (video) {
     // const data = fs.readFileSync(`./assets/captions/${id}.vtt`);
-    const data = fs.readFileSync(path.join(serverRuntimeConfig.PROJECT_ROOT, `./assets/captions/${id}.vtt`))
+    const data = fs.readFileSync(path.join(serverRuntimeConfig.PROJECT_ROOT, `./public/assets/captions/${id}.vtt`))
     res.send(data);
   } else {
     res.status(404).json({ msg: 'Not found' });
